@@ -1,0 +1,32 @@
+{
+  "name": "opium-filter",
+  "description": "Fast and easy filter for complex objects",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.171",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opium-pro/opium-filter.git"
+  },
+  "keywords": [
+    "filter",
+    "objects",
+    "includes",
+    "search"
+  ],
+  "author": "opium.pro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opium-pro/opium-filter/issues"
+  },
+  "homepage": "https://github.com/opium-pro/opium-filter#readme"
+}
