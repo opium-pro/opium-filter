@@ -5,6 +5,7 @@ tsconfig.json
 LICENSE
 README.md
 tsconfig.dist.json
+/tests
 
 # dependencies
 /node_modules
