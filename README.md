@@ -1,9 +1,14 @@
 # The fastest way to filter an array of objects
 
-`npm i opium-filter`
+```js
+npm i opium-filter
+```
 
 Returns a new object with filtered items
-`filter(dataset, filter, [options])`
+```js
+filter(dataset, filter, [options])
+```
+
 
 ## Examples
 ```js
@@ -20,6 +25,7 @@ const data = [
 ]
 ```
 
+
 ## Partial match
 Returns any object that contains '2' in name
 ```js
@@ -29,7 +35,7 @@ filter(data, {name: '2'})
 ```
 
 ## Exact match
-Rerutns only the objects with names 'name2' and 'name3'
+If set filter value in array, in returns only the exact match of any item
 ```js
 filter(data, {name: ['name2', 'name3']})
 
@@ -38,6 +44,7 @@ filter(data, {name: ['name2', 'name3']})
 //  {name: "name3", value: "Value #3"},
 //]
 ```
+
 
 ## Matching values from inner objects
 If filter can't find a key on top level, it will try to find it deeper
@@ -61,6 +68,7 @@ filter(data, "#5", {deep: true})
 // returns [{name: "name5", value: {deepValue: "Deep Value #5"}}]
 ```
 
+
 ## Match any value inside of a specific key
 ```js
 filter(data, {value: {deepValue: "#5"}})
@@ -75,6 +83,7 @@ filter(data, {value: "#5"}, {deep: true})
 // returns [{name: "name5", value: {deepValue: "Deep Value #5"}}]
 ```
 
+
 ## Match a value inside of array
 Finding values inside of an array doesn't requere any additional actions
 
@@ -83,6 +92,7 @@ filter(data, {deepValue: "#6"})
 
 // returns [{name: "name6", value: [{deepValue: "Deep Value #6"}]}]
 ```
+
 
 ## Limit number of returned objects
 ```js

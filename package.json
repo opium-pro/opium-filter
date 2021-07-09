@@ -1,7 +1,7 @@
 {
   "name": "opium-filter",
-  "description": "Fast and easy filter for complex objects",
-  "version": "1.0.0",
+  "description": "The fastest way to filter an array of objects",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "dependencies": {
     "lodash": "^4.17.21"
