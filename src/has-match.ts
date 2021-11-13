@@ -10,11 +10,11 @@ export default function hasMatch(
   }
 ): boolean {
 
-  if (options?.exact) {
+  if (options && options.exact) {
     return isEqual(origin, filter)
   }
-  const forceExactOff = options?.exact === false
-  const forceDeepOff = options?.deep === false
+  const forceExactOff = (options && options.exact) === false
+  const forceDeepOff = (options && options.deep) === false
 
   if (origin === filter) {
     return true
@@ -47,7 +47,7 @@ export default function hasMatch(
       return hasSubstring(origin, filter)
     }
 
-    if (options?.deep) {
+    if (options && options.deep) {
       for (const key in origin) {
         if (hasMatch(origin[key], filter, options)) {
           return true

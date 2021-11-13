@@ -11,10 +11,10 @@ export default function hasSubstring(origin: any, target: any): boolean {
     return true
   }
 
-  origin = origin.toString()?.toLowerCase()
-  target = target.toString()?.toLowerCase()
+  origin = origin.toString() && origin.toString().toLowerCase()
+  target = target.toString() && target.toString().toLowerCase()
 
-  if (origin.indexOf?.(target) >= 0) {
+  if (origin.indexOf && origin.indexOf(target) >= 0) {
     return true
   }
 

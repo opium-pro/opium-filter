@@ -14,16 +14,16 @@ export default function filter (
   if (!dataset || !Array.isArray(dataset)) {return dataset}
   if (!filter) {return dataset}
 
-  if (options?.filterChild) {
+  if (options && options.filterChild) {
     return filterChild(dataset, filter, options.filterChild)
   }
 
   let result = [...dataset].filter((item) => hasMatch(item, filter, {
-    exact: options?.exact,
-    deep: options?.deep,
+    exact: options && options.exact,
+    deep: options && options.deep,
   }))
 
-  if (options?.limit) {
+  if (options && options.limit) {
     result = result.slice(0, options.limit)
   }
 
