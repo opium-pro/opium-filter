@@ -5,7 +5,7 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "CommonJS",
     "isolatedModules": true,
     "noImplicitAny": false,
     "noImplicitReturns": true,
