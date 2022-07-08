@@ -1,7 +1,7 @@
 import hasMatch from './has-match'
 import filterChild from './filter-child'
 
-export default function filter (
+export default function filter(
   dataset?: Array<any>,
   filter?: any,
   options?: {
@@ -11,8 +11,8 @@ export default function filter (
     deep?: boolean,
   }
 ): Array<any> | undefined {
-  if (!dataset || !Array.isArray(dataset)) {return dataset}
-  if (!filter) {return dataset}
+  if (!dataset || !Array.isArray(dataset)) { return dataset }
+  if (!filter) { return dataset }
 
   if (options && options.filterChild) {
     return filterChild(dataset, filter, options.filterChild)
@@ -29,3 +29,7 @@ export default function filter (
 
   return result
 }
+
+filter.filter = filter
+
+export { filter }

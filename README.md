@@ -12,7 +12,7 @@ filter(dataset, filter, [options])
 
 ## Examples
 ```js
-import filter from 'opium-filter'
+import { filter } from 'opium-filter'
 
 // Demo dataset
 const data = [
