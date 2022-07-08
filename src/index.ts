@@ -30,6 +30,4 @@ export default function filter(
   return result
 }
 
-filter.filter = filter
-
 export { filter }
